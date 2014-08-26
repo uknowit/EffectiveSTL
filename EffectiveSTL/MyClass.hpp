@@ -50,10 +50,10 @@ public:
 	}
 };
 
-class BadPredicate:public std::unary_function<MyClass,bool> {
+class BadPredicate:public std::unary_function<MyDerivedClass,bool> {
 public:
 	BadPredicate():timesCalled(0){}
-	bool operator()(const MyClass&)
+	bool operator()(const MyDerivedClass&)
 	{
 		std::cout<<"Invoking bad predicate::"<<timesCalled<<std::endl;
 		return ++timesCalled==3;

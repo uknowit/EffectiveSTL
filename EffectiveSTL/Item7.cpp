@@ -26,7 +26,7 @@ void MyDerivedClass::memberFunc()
 	classVector.push_back(MyDerivedClass("D"));
 	classVector.push_back(MyDerivedClass("E"));
 	classVector.push_back(MyDerivedClass("F"));
-	classVector.push_back(MyDerivedClass("G"));
+
 	classVector.erase(my_remove_if(classVector.begin(),classVector.end(),BadPredicate()),classVector.end());
 	cout<<"Vector size::"<<classVector.size()<<endl;
 	pointerList.push_back(classPointer1);
